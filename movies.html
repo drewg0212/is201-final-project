@@ -1,29 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <title>Movie Page</title>
-        <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
-        <link href="css/styles.css" rel="stylesheet" />
-        <link href="scratch-styles.css" rel="stylesheet" />
-    </head>
-    <body>
-        <h1>Movie Scratch Page</h1>
-        <p>I love movies! These are my favorites:</p>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Favorite Movies</title>
+    <link rel="stylesheet" href="scratch-styles.css">
+</head>
+<body>
+
+    <div class="header-block">
+        <h1>Welcome to My Movie Corner</h1>
+        <p>A scratch page dedicated to my absolute favorite films.</p>
+        <a href="#video-section" style="color: #18bc9c; font-size: 1.1em;">↓ Jump to my favorite movie video ↓</a>
+    </div>
+
+    <div class="navigation-block" style="padding: 30px; background-color: #e8eaed;">
+        <h2 style="margin-top: 0;">Explore My Site</h2>
+        <a href="index.html" style="display: inline-block; padding: 15px 25px; background-color: #2c3e50; color: white; border-radius: 8px; font-size: 1.3em; margin: 10px; text-decoration: none; box-shadow: 0 4px 6px rgba(0,0,0,0.2);">💼 Back to Professional Resume</a>
+        
+        <a href="app.html" style="display: inline-block; padding: 15px 25px; background-color: #e74c3c; color: white; border-radius: 8px; font-size: 1.3em; margin: 10px; text-decoration: none; box-shadow: 0 4px 6px rgba(0,0,0,0.2);">🎮 Play the "Guess the Movie" Game!</a>
+    </div>
+
+    <div class="content-block">
+        <h2>Top Picks List</h2>
         <ol>
-            <li>Project Hail Mary</li>
+            <li>Project Hail Mary
+                <ul>
+                    <li>Based on the sci-fi novel by Andy Weir</li>
+                </ul>
+            </li>
+            <li>The Notebook</li>
+            <li>La La Land</li>
             <li>Wall-E</li>
             <li>Notting Hill</li>
-            <li>La La Land</li>
+            <li>Ferris Bueller's Day Off</li>
+            <li>Passengers</li>
         </ol>
 
-        <img src="movie-photo.jpg" alt="Project Hail Mary Movie Image" height="400">
+        <h2>Project Hail Mary</h2>
+        <img src="movie-photo.jpg" alt="Project Hail Mary Book Cover" width="300">
+    </div>
 
-        <br><br>
+    <div id="video-section" class="video-block">
+        <h2>Why Wall-E is a Masterpiece</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/alIq_wG9FNk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
 
-        <h3>Cool Movie Data (Tableau)</h3>
-        <div class='tableauPlaceholder' id='viz1776897950645' style='position: relative'>
+    <div class="tableau-block">
+        <h2>Cool Movie Data (Tableau)</h2>
+        <div class='tableauPlaceholder' id='viz1776897950645' style='position: relative; margin: 0 auto;'>
             <noscript>
                 <a href='#'><img alt='Walt Disney Movies ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Wa&#47;WaltDisneyMoviesDataPlusMovies&#47;WaltDisneyMovies&#47;1_rss.png' style='border: none' /></a>
             </noscript>
@@ -51,16 +76,13 @@
             scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    
             vizElement.parentNode.insertBefore(scriptElement, vizElement);                
         </script>
-        <br><br>
+        </div>
 
-        <h3>Movie Trailer</h3>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/uYPbbksJxIg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <div class="navigation-block">
+        <h2>Thanks for visiting!</h2>
+        <a href="index.html">Back to Professional Resume</a><br><br>
+        <a href="app.html">Play the "Guess the Movie" Game!</a>
+    </div>
 
-        <br><br>
-        
-        <a href="index.html">Back to Resume</a> | 
-        <a href="app.html">Movie Guessing Game</a>
-
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-    </body>
+</body>
 </html>
