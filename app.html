@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the Movie App</title>
+    <style>
+        body { 
+            font-family: 'Helvetica Neue', Arial, sans-serif; 
+            background-color: #2c3e50; 
+            color: white; 
+            text-align: center; 
+            padding: 50px; 
+            margin: 0;
+        }
+        .game-container { 
+            background: white; 
+            color: #333; 
+            padding: 40px; 
+            border-radius: 12px; 
+            display: inline-block; 
+            box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+            max-width: 450px;
+            width: 90%;
+        }
+        h1 { color: #2980b9; }
+        #clue { 
+            font-size: 1.2em; 
+            font-weight: bold; 
+            margin: 20px 0; 
+            color: #e74c3c;
+            min-height: 50px;
+        }
+        input { 
+            padding: 12px; 
+            width: 80%; 
+            border-radius: 5px; 
+            border: 2px solid #bdc3c7; 
+            font-size: 1em;
+            margin-bottom: 15px;
+        }
+        button { 
+            padding: 12px 25px; 
+            background: #18bc9c; 
+            color: white; 
+            border: none; 
+            border-radius: 5px; 
+            cursor: pointer; 
+            font-size: 1em;
+            font-weight: bold;
+        }
+        button:hover { background: #128f76; }
+        #feedback { margin-top: 20px; font-weight: bold; font-size: 1.1em; height: 25px; }
+        .back-btn {
+            display: inline-block;
+            margin-top: 30px;
+            color: #18bc9c;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="game-container">
+        <h1>Movie Guessing Game</h1>
+        <p>Guess the movie based on the actors!</p>
+        
+        <div id="clue">Loading clue...</div>
+        
+        <input type="text" id="guessInput" placeholder="Enter movie title..." onkeydown="if (event.key === 'Enter') checkGuess()">
+        <br>
+        <button onclick="checkGuess()">Submit Guess</button>
+        
+        <div id="feedback"></div>
+    </div>
+    <br>
+    <a href="movies.html" class="back-btn">← Back to Movie Page</a>
+
+    <script>
+        // Array of your favorite movies and clues
+        const moviesList = [
+            { name: "Project Hail Mary", actors: "Ryan Gosling (Upcoming Film)" },
+            { name: "The Notebook", actors: "Ryan Gosling & Rachel McAdams" },
+            { name: "La La Land", actors: "Ryan Gosling & Emma Stone" },
+            { name: "Wall-E", actors: "A lonely robot and a plant" },
+            { name: "Notting Hill", actors: "Julia Roberts & Hugh Grant" },
+            { name: "Ferris Buellers Day Off", actors: "Matthew Broderick & Alan Ruck" },
+            { name: "Passengers", actors: "Jennifer Lawrence & Chris Pratt" }
+        ];
+
+        let currentIdx = 0;
+
+        // Initialize the first clue
+        function loadNextClue() {
+            if (currentIdx < moviesList.length) {
+                document.getElementById('clue').innerText = "Clue: " + moviesList[currentIdx].actors;
+                document.getElementById('guessInput').value = "";
+                document.getElementById('feedback').innerText = "";
+            } else {
+                // End of game
+                document.querySelector('.game-container').innerHTML = `
+                    <h1>Winner! 🏆</h1>
+                    <p>You guessed all my favorite movies!</p>
+                    <button onclick="location.reload()">Play Again</button>
+                `;
+            }
+        }
+
+        function checkGuess() {
+            const input = document.getElementById('guessInput').value.trim().toLowerCase();
+            const correctAnswer = moviesList[currentIdx].name.toLowerCase();
+
+            // Simple check (removes dashes/dots to make it easier for the user)
+            if (input.replace(/[^a-z0-9]/g, "") === correctAnswer.replace(/[^a-z0-9]/g, "")) {
+                document.getElementById('feedback').style.color = "#27ae60";
+                document.getElementById('feedback').innerText = "Correct! 🎉 Next movie coming up...";
+                
+                // Wait 1.5 seconds then load next clue
+                currentIdx++;
+                setTimeout(loadNextClue, 1500);
+            } else {
+                document.getElementById('feedback').style.color = "#c0392b";
+                document.getElementById('feedback').innerText = "Try again! ❌";
+            }
+        }
+
+        // Start the game
+        loadNextClue();
+    </script>
+</body>
+</html>
