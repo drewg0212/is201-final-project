@@ -3,91 +3,63 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <title>Drew's Movie Scratch Page</title>
+        <title>Movie Page</title>
         <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
         <link href="css/styles.css" rel="stylesheet" />
         <link href="scratch-styles.css" rel="stylesheet" />
     </head>
-    <body style="background-color: #fcf8f2; padding-top: 70px;">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-            <div class="container">
-                <a class="navbar-brand" href="index.html">← Back to Resume</a>
-                <a class="btn btn-warning" href="app.html" style="font-weight: bold; color: white;">Movie Guessing Game →</a>
-            </div>
-        </nav>
+    <body>
+        <h1>Movie Scratch Page</h1>
+        <p>I love movies! These are my favorites:</p>
+        <ol>
+            <li>Project Hail Mary</li>
+            <li>Wall-E</li>
+            <li>Notting Hill</li>
+            <li>La La Land</li>
+        </ol>
 
-        <div class="container mt-5">
-            <h1 class="text-center display-4" style="color: #bd5d38; font-weight: bold;">Drew's Favorite Movies & Data</h1>
-            <hr>
+        <img src="movie-photo.jpg" alt="Project Hail Mary Movie Image" height="400">
 
-            <div class="row align-items-center mb-5">
-                <div class="col-md-6 text-center">
-                    <img src="movie-photo.jpg" alt="Project Hail Mary" class="img-fluid rounded shadow" style="max-height: 400px;">
-                    <p class="mt-2"><i>My favorite read/watch: Project Hail Mary</i></p>
-                </div>
-                <div class="col-md-6">
-                    <h3>My All-Time Favorites:</h3>
-                    <ol class="list-group list-group-numbered">
-                        <li class="list-group-item">Project Hail Mary (Upcoming)</li>
-                        <li class="list-group-item">Wall-E</li>
-                        <li class="list-group-item">Notting Hill</li>
-                        <li class="list-group-item">La La Land</li>
-                        <li class="list-group-item">The Dark Knight</li>
-                    </ol>
-                </div>
-            </div>
+        <br><br>
 
-            <div class="card shadow mb-5">
-                <div class="card-header bg-success text-white text-center">
-                    <h4 class="mb-0">Interactive Disney Data Analysis</h4>
-                </div>
-                <div class="card-body">
-                    <div class='tableauPlaceholder' id='viz1776897950645' style='position: relative; margin: 0 auto;'>
-                        <noscript>
-                            <a href='#'><img alt='Walt Disney Movies ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Wa&#47;WaltDisneyMoviesDataPlusMovies&#47;WaltDisneyMovies&#47;1_rss.png' style='border: none' /></a>
-                        </noscript>
-                        <object class='tableauViz' style='display:none;'>
-                            <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
-                            <param name='embed_code_version' value='3' /> 
-                            <param name='site_root' value='' />
-                            <param name='name' value='WaltDisneyMoviesDataPlusMovies&#47;WaltDisneyMovies' />
-                            <param name='tabs' value='no' />
-                            <param name='toolbar' value='yes' />
-                            <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Wa&#47;WaltDisneyMoviesDataPlusMovies&#47;WaltDisneyMovies&#47;1.png' /> 
-                            <param name='animate_transition' value='yes' />
-                            <param name='display_static_image' value='yes' />
-                            <param name='display_spinner' value='yes' />
-                            <param name='display_overlay' value='yes' />
-                            <param name='display_count' value='yes' />
-                            <param name='language' value='en-US' />
-                        </object>
-                    </div>                
-                    <script type='text/javascript'>                    
-                        var divElement = document.getElementById('viz1776897950645');                    
-                        var vizElement = divElement.getElementsByTagName('object')[0];                    
-                        vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.65)+'px';                    
-                        var scriptElement = document.createElement('script');                    
-                        scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    
-                        vizElement.parentNode.insertBefore(scriptElement, vizElement);                
-                    </script>
-                </div>
-            </div>
+        <h3>Cool Movie Data (Tableau)</h3>
+        <div class='tableauPlaceholder' id='viz1776897950645' style='position: relative'>
+            <noscript>
+                <a href='#'><img alt='Walt Disney Movies ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Wa&#47;WaltDisneyMoviesDataPlusMovies&#47;WaltDisneyMovies&#47;1_rss.png' style='border: none' /></a>
+            </noscript>
+            <object class='tableauViz' style='display:none;'>
+                <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
+                <param name='embed_code_version' value='3' /> 
+                <param name='site_root' value='' />
+                <param name='name' value='WaltDisneyMoviesDataPlusMovies&#47;WaltDisneyMovies' />
+                <param name='tabs' value='no' />
+                <param name='toolbar' value='yes' />
+                <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Wa&#47;WaltDisneyMoviesDataPlusMovies&#47;WaltDisneyMovies&#47;1.png' /> 
+                <param name='animate_transition' value='yes' />
+                <param name='display_static_image' value='yes' />
+                <param name='display_spinner' value='yes' />
+                <param name='display_overlay' value='yes' />
+                <param name='display_count' value='yes' />
+                <param name='language' value='en-US' />
+            </object>
+        </div>                
+        <script type='text/javascript'>                    
+            var divElement = document.getElementById('viz1776897950645');                    
+            var vizElement = divElement.getElementsByTagName('object')[0];                    
+            vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.65)+'px';                    
+            var scriptElement = document.createElement('script');                    
+            scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    
+            vizElement.parentNode.insertBefore(scriptElement, vizElement);                
+        </script>
+        <br><br>
 
-            <div class="row justify-content-center mb-5">
-                <div class="col-md-10">
-                    <h3 class="text-center">Movie Spotlight</h3>
-                    <div class="ratio ratio-16x9 shadow rounded overflow-hidden">
-                        <iframe src="https://www.youtube.com/embed/uYPbbksJxIg" title="YouTube video player" allowfullscreen></iframe>
-                    </div>
-                </div>
-            </div>
+        <h3>Movie Trailer</h3>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/uYPbbksJxIg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-            <div class="text-center mb-5 p-4 bg-light rounded shadow-sm">
-                <a class="btn btn-outline-dark mx-2" href="index.html">Back to My Resume</a>
-                <a class="btn btn-primary mx-2" href="app.html">Try the Movie Guessing Game</a>
-            </div>
-
-        </div>
+        <br><br>
+        
+        <a href="index.html">Back to Resume</a> | 
+        <a href="app.html">Movie Guessing Game</a>
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     </body>
